@@ -25,9 +25,9 @@ const Example = () => {
   useClickOutside( ref, () => setActive( false ) );
 
   return (
-    <div ref={ ref } onClick={ setActive( ! active ) }>
-      <h4>Click to toggle the content below.</h4>
-      <p isActive={ active }>This text could be visible based on isActive and it can be hidden when clicking away from it.</p>
+    <div ref={ ref } onClick={ () => setActive( ! active ) }>
+      <h4>Click here to toggle the hidden content.</h4>
+      <p className={ ! active && 'hidden' }>This text is made visible when clicking the container and hidden again when clicking outside of it.</p>
     <div>
   );
 };
