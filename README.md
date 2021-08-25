@@ -32,37 +32,3 @@ const Example = () => {
   );
 };
 ```
-
----
-
-### `useViewportWidth()`
-Use the `window.innerWidth` prop while supporting `SSR` conditions.
-
-> You should still rely on **CSS media queries** as much as possible. Don't lean on this logic to simply determine when something should be visible. It's more suitable when more complicated functionality needs to be swapped out.
-
-#### Parameters
-None.
-
-#### Returns
-`Integer` - Width of `window` or `null` for server-side rendering.
-
-#### Example
-```
-import { useMemo } from 'react';
-
-import useViewportWidth from './use-viewport-width';
-
-const Example = () => {
-  const viewportWidth = useViewportWidth();
-
-  const isMobile = useMemo( () => {
-    return viewportWidth < 768;
-  }, [ viewportWidth ] );
-
-  return isMobile ? (
-    <p>Mobile content</p>
-  ) : (
-    <p>Desktop content</p>
-  );
-};
-```
