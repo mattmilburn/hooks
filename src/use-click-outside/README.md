@@ -1,11 +1,12 @@
-#### `useClickOutside( ref, onClickOutside )`
+#### `useClickOutside( ref, callback, shouldListen )`
 Run a callback when clicking outside of an element. Useful for dismissing an active state on blur.
 
 #### Parameters
 | Param | Description |
 |---|---|
 | `ref` | DOM reference provided by `useRef` |
-| `onClickOutside` | Callback function to run |
+| `callback` | Callback function to run |
+| `shouldListen` | Flag to toggle  |
 
 #### Returns
 None.
